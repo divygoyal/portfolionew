@@ -855,3 +855,338 @@ p.bio {
   align-items: center;
   gap: 0.5rem;
 }
+
+/* ============================================ */
+/* COMPREHENSIVE MOBILE STYLES                  */
+/* ============================================ */
+@media (max-width: 640px) {
+
+  /* Root spacing */
+  #root { padding: 1.5rem 0.8rem; }
+  .portfolio-container { gap: 1.2rem; }
+
+  /* All cards full width */
+  .bento-card,
+  .bento-card.wide,
+  .bento-card.half,
+  .vibecoded-section {
+    grid-column: span 12;
+  }
+
+  .bento-card { padding: 1.5rem; }
+  .bento-card:hover { transform: none; box-shadow: var(--shadow); }
+
+  /* ---- PROFILE ---- */
+  .bento-card.profile {
+    flex-direction: column;
+  }
+
+  .profile-left {
+    padding: 2rem 1.5rem;
+  }
+
+  h1.name {
+    font-size: 2.8rem;
+    letter-spacing: -1px;
+  }
+
+  p.bio {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .actions .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-reveal:hover {
+    min-width: unset;
+  }
+
+  .contact-links {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+    padding-top: 1.2rem;
+  }
+
+  .contact-links .btn {
+    flex: 1;
+    min-width: 0;
+    justify-content: center;
+    padding: 0.7rem 0.5rem;
+    font-size: 0.8rem;
+    gap: 0.4rem;
+  }
+
+  .profile-right {
+    width: 100%;
+    border-left: none;
+    border-top: var(--border-width) solid var(--border-color);
+    padding: 2rem 1.5rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+    background-size: 22px 22px;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+    box-shadow: 4px 4px 0px var(--border-color);
+  }
+
+  .profile-quick-stats {
+    flex: 1;
+    gap: 0.6rem;
+  }
+
+  .quick-stat {
+    padding: 0.5rem 0.8rem;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .quick-stat-val { font-size: 1.3rem; }
+  .quick-stat-lbl { font-size: 0.6rem; }
+
+  /* ---- SHIPPED & LIVE ---- */
+  .vibecoded-hero {
+    padding: 2rem 1.5rem;
+  }
+
+  .vibecoded-hero h2 {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .vibecoded-hero p {
+    font-size: 1rem;
+  }
+
+  .project-header-strip {
+    padding: 1rem 1.2rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-name-group h3 {
+    font-size: 1.4rem;
+  }
+
+  .project-header-strip .btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.85rem;
+  }
+
+  /* Stats row — 2x2 grid on mobile */
+  .project-stats-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-stat {
+    padding: 1rem;
+    border-right: none;
+    border-bottom: 2px solid var(--border-color);
+  }
+
+  .project-stat:nth-child(odd) {
+    border-right: 2px solid var(--border-color);
+  }
+
+  .project-stat:nth-child(n+3) {
+    border-bottom: none;
+  }
+
+  .project-stat-val { font-size: 2rem; }
+  .project-stat-label { font-size: 0.7rem; }
+  .project-stat-change { font-size: 0.75rem; }
+
+  /* Project body stacks */
+  .project-body {
+    flex-direction: column;
+  }
+
+  .project-video-side {
+    border-right: none;
+    border-bottom: var(--border-width) solid var(--border-color);
+    padding: 1.2rem;
+    gap: 1rem;
+    background-size: 12px 12px;
+  }
+
+  .project-features-side {
+    padding: 1.5rem;
+  }
+
+  .project-tagline {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .feature-card {
+    padding: 1rem;
+    box-shadow: 2px 2px 0px var(--border-color);
+  }
+
+  .feature-card-title { font-size: 0.95rem; }
+  .feature-card-desc { font-size: 0.85rem; }
+
+  .video-wrapper {
+    box-shadow: 4px 4px 0px var(--border-color);
+  }
+
+  .video-caption {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  /* ---- SKILLS ---- */
+  .skill-marquee-row {
+    gap: 0.5rem;
+  }
+
+  .skill-chip {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    box-shadow: 2px 2px 0px var(--border-color);
+  }
+
+  .skill-chip:hover {
+    transform: none;
+    box-shadow: 2px 2px 0px var(--border-color);
+  }
+
+  /* ---- EXPERIENCE TIMELINE ---- */
+  .exp-timeline {
+    padding-left: 0;
+  }
+
+  .exp-timeline::before {
+    display: none;
+  }
+
+  .experience-block::before {
+    display: none;
+  }
+
+  .experience-block {
+    box-shadow: 3px 3px 0px var(--border-color);
+    margin-bottom: 1.5rem;
+  }
+
+  .experience-block:hover {
+    transform: none;
+    box-shadow: 3px 3px 0px var(--border-color);
+  }
+
+  .exp-inner {
+    padding: 1.2rem;
+  }
+
+  .exp-header {
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .exp-title { font-size: 1.3rem; }
+  .exp-company { font-size: 1rem; }
+
+  .exp-date {
+    align-self: flex-start;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .exp-tech { gap: 0.4rem; margin-bottom: 1rem; }
+  .exp-tech-tag { font-size: 0.7rem; padding: 0.25rem 0.5rem; }
+
+  .exp-metrics {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .exp-metric {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.7rem;
+    box-shadow: 1px 1px 0px var(--border-color);
+  }
+
+  .bullet-list li {
+    font-size: 0.95rem;
+    padding-left: 1.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .exp-achievement {
+    font-size: 0.85rem;
+    padding: 0.7rem 1rem;
+  }
+
+  /* ---- SECTION TITLES ---- */
+  h3.section-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  /* ---- LIGHTBOX ---- */
+  .video-lightbox {
+    padding: 0.5rem;
+  }
+
+  .video-lightbox video {
+    max-width: 100%;
+    border-radius: 8px;
+    border: 3px solid #fff;
+  }
+
+  .lightbox-close {
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Tablet tweaks */
+@media (min-width: 641px) and (max-width: 900px) {
+  h1.name { font-size: 3.5rem; }
+  
+  .bento-card.half { grid-column: span 12; }
+
+  .project-body { flex-direction: column; }
+
+  .project-video-side {
+    border-right: none;
+    border-bottom: var(--border-width) solid var(--border-color);
+  }
+
+  .profile-right {
+    width: 100%;
+    border-left: none;
+    border-top: var(--border-width) solid var(--border-color);
+  }
+
+  .vibecoded-hero h2 { font-size: 2.5rem; }
+}
